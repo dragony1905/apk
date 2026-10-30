@@ -32,6 +32,9 @@ ORBİT, halkaları döndürüp renkleri eşleştirdiğin bir bulmaca oyunudur. B
 - Reklam kimliğini telefonunun ayarlarından sıfırlayabilir ya da silebilirsin (Ayarlar → Google → Reklamlar).
 - Kutular ve oyun içi ödüller reklamla satılmaz.
 
+## Güncelleme kontrolü
+Oyun açılışta ve sen istediğinde GitHub'daki bu depodan `guncelleme.json` dosyasını okur; yeni sürüm indirirsen APK da buradan iner. Bu isteklerde senin hakkında bir bilgi gönderilmez; GitHub her web isteğinde olduğu gibi IP adresini görebilir. Yeni sürüm bildirimini Ayarlar → Güncellemeler'den kapatabilirsin.
+
 ## Paylaşım ve saklama
 - Bilgilerin satılmaz. Profil ve oyun verilerin reklam amacıyla paylaşılmaz; reklamlar için yalnızca yukarıda yazan, AdMob'un doğrudan topladığı bilgiler kullanılır.
 - Veriler Lovable Cloud (Supabase) altyapısında, şifreli bağlantı (HTTPS) üzerinden saklanır.

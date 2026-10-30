@@ -1,0 +1,32 @@
+name: Sürümü yayınla
+
+# surumler/ klasörüne yeni bir ORBIT-<sürüm>.apk eklenince GitHub "Releases" sayfasında v<sürüm> sürümü oluşturulur.
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'surumler/*.apk' ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - name: Yayınla
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for apk in surumler/ORBIT-*.apk; do
+            VER=$(basename "$apk" .apk); VER=${VER#ORBIT-}
+            if gh release view "v$VER" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then continue; fi
+            ( cd surumler && sha256sum -c "ORBIT-$VER.apk.sha256" )      # özet tutmazsa yayınlanmaz
+            gh release create "v$VER" "$apk" "surumler/ORBIT-$VER.apk.sha256" --repo "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" --title "ORBİT $VER" --latest \
+              --notes "ORBİT $VER. İndir: ORBIT-$VER.apk. Dosyanın değişmediğini SHA-256 özetiyle doğrulayabilirsin (ORBIT-$VER.apk.sha256)."
+          done

@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-ptwxCpPVpVphPlinIW7TBiSmGAokUrMSF/eA/2O7KEU=' 'sha256-dnJi0Chb0KYJAzM10TCupnwMMXRydukMyhlbKaVnLfg=' 'sha256-VrrTzOHRomQgiFEniq/tL57AKs6gUUnYlSuStOgIAtw=' 'sha256-DtXJIytJc9sAzMGXtGquDL2dk6U4vZs/fi3XRVtrtB8=' 'sha256-okNxuZYDWIYsacURM7hT0b+Lq8Zy0NIWId8IjOKpKrk=' 'sha256-KZdbgSfifMZhO6XrLKFzV4lxz8QDX9oSezEFbQjmYGA=' 'sha256-EdtZWt4aBvRZvt8VVeqpKXjoq0K1KuGpN3oB21WHiO0='; style-src 'unsafe-inline'; img-src data: blob: 'self'; font-src data:; connect-src 'self' https://c--11fd4de8-1fa4-417e-b2d7-5336fc077063-prod.lovable.cloud; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-ptwxCpPVpVphPlinIW7TBiSmGAokUrMSF/eA/2O7KEU=' 'sha256-dnJi0Chb0KYJAzM10TCupnwMMXRydukMyhlbKaVnLfg=' 'sha256-VrrTzOHRomQgiFEniq/tL57AKs6gUUnYlSuStOgIAtw=' 'sha256-DtXJIytJc9sAzMGXtGquDL2dk6U4vZs/fi3XRVtrtB8=' 'sha256-okNxuZYDWIYsacURM7hT0b+Lq8Zy0NIWId8IjOKpKrk=' 'sha256-KZdbgSfifMZhO6XrLKFzV4lxz8QDX9oSezEFbQjmYGA=' 'sha256-tE+9p9EJtznulW/5pN7YU4Uu83SKkqtUsBwpO+sMDTA='; style-src 'unsafe-inline'; img-src data: blob: 'self'; font-src data:; connect-src 'self' https://c--11fd4de8-1fa4-417e-b2d7-5336fc077063-prod.lovable.cloud; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
@@ -153,7 +153,7 @@
   <!-- Web: ana ekrana ekleme -->
   <div class="ov" id="instOv" hidden>
     <div class="card inst">
-      <img class="inst-ic" data-src="icons/icon-192.png" alt="" width="64" height="64">
+      <svg class="inst-ic" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" fill="#F6F3EC"/><g fill="none" stroke="#292B30" stroke-width="3.4"><circle cx="50" cy="50" r="11"/><circle cx="50" cy="50" r="21"/><circle cx="50" cy="50" r="31"/></g><circle cx="72" cy="28" r="6" fill="#FF6B5E"/><circle cx="64" cy="42" r="4.5" fill="#2FCB9A"/><circle cx="57" cy="57" r="4.6" fill="#FFC73A"/><circle cx="34" cy="68" r="5.6" fill="#3D9BF0"/></svg>
       <h2>ORBİT'i ana ekrana ekle</h2>
       <p class="sub" id="instWhy">Uygulama gibi tam ekran açılır, internetsiz de oynanır. İlerlemen bu cihazda kalır.</p>
       <ol class="inst-steps" id="instIos" hidden>
@@ -1545,6 +1545,8 @@ function saveDda(){store.set('orbit.dda',JSON.stringify(dda))}
 function roundCfg(){return dda.enabled?{...CFG,...levelParams(dda.level)}:CFG}
 const bestKey=()=>(typeof MODE!=='undefined'&&MODE==='daily')?'orbit.dailyBest.'+dayKey():dda.enabled?'orbit.best.dda.'+CFG.mode:cfgKey(CFG);
 const IN_APP=/ORBITApp\//.test(navigator.userAgent);
+const IN_SRCDOC=(()=>{try{return window.top!==window&&location.href==='about:srcdoc'&&!!window.top.location.href}catch(e){return false}})();
+const HOST_LOC=IN_SRCDOC?window.top.location:location,HOST_HIST=IN_SRCDOC?window.top.history:history;
 const AVATARS=[[0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[1,2],[3,0]];
 const AVATAR_SHAPES=['<circle cx="12" cy="12" r="3.2"/>','<path d="M12 7l5 9H7z"/>','<path d="M12 6l6 6-6 6-6-6z"/>','<rect x="8" y="8" width="8" height="8"/>','<path d="M12 7v10M7 12h10" stroke-width="2.4" stroke-linecap="round"/>','<circle cx="12" cy="12" r="4" fill="none" stroke-width="2"/>'];
 const okPhoto=s=>typeof s==='string'&&s.length<200000&&/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(s);
@@ -1731,8 +1733,8 @@ if(!sess||!acct||!acct.username||acct.google||busy)return;
 try{busy=true;msg=__t('Google hesabı bağlanıyor…',[]);emit();const r=await rpc('orbit_link_begin',{});linking={code:r.code,sess:{...sess}};set('orbit.__link',JSON.stringify(linking))}
 catch(e){busy=false;msg=errText(e);emit();return}
 if(NATIVE()){try{window.OrbitNative.googleSignIn(String(CF.googleWebClientId||''))}catch(e){endLink(__t('Giriş başlatılamadı.',[]))}return}
-const back=location.origin+location.pathname;
-location.href=BASE+'/auth/v1/authorize?provider=google&redirect_to='+encodeURIComponent(back);
+const back=HOST_LOC.origin+HOST_LOC.pathname;
+HOST_LOC.href=BASE+'/auth/v1/authorize?provider=google&redirect_to='+encodeURIComponent(back);
 }
 function endLink(text){busy=false;if(linking){sess=linking.sess;set('orbit.__sess',JSON.stringify(sess))}linking=null;del('orbit.__link');msg=text||'';emit()}
 async function finishLink(gTok){
@@ -1749,8 +1751,8 @@ busy=true;msg=__t("Google hesabı seçiliyor…");emit();
 try{window.OrbitNative.googleSignIn(String(CF.googleWebClientId||''))}catch(e){busy=false;msg=__t("Giriş başlatılamadı.");emit()}
 return;
 }
-const back=location.origin+location.pathname;
-location.href=BASE+'/auth/v1/authorize?provider=google&redirect_to='+encodeURIComponent(back);
+const back=HOST_LOC.origin+HOST_LOC.pathname;
+HOST_LOC.href=BASE+'/auth/v1/authorize?provider=google&redirect_to='+encodeURIComponent(back);
 }
 window.orbitNativeAuth=async r=>{
 busy=false;
@@ -1776,19 +1778,19 @@ sess=null;user=null;me=null;acct=null;del('orbit.__sess');del('orbit.__acct');ap
 }
 async function boot(){
 if(!ON)return;
-const h=new URLSearchParams(location.hash.slice(1));
+const h=new URLSearchParams(HOST_LOC.hash.slice(1));
 if(h.get('access_token')&&get('orbit.__link')){
-history.replaceState(null,'',location.pathname+location.search);
+HOST_HIST.replaceState(null,'',HOST_LOC.pathname+HOST_LOC.search);
 linking=jget('orbit.__link',null);if(linking&&linking.sess){busy=true;await finishLink(h.get('access_token'));if(sess){try{await link()}catch(e){}}return}
 }
 if(h.get('access_token')){
-history.replaceState(null,'',location.pathname+location.search);
+HOST_HIST.replaceState(null,'',HOST_LOC.pathname+HOST_LOC.search);
 try{
 sess={access_token:h.get('access_token'),refresh_token:h.get('refresh_token'),expires_at:+h.get('expires_at')||Math.floor(Date.now()/1000)+(+h.get('expires_in')||3600),user:{id:''}};
 const u=await http('/auth/v1/user',{method:'GET'});keep({...sess,user:u});await link();return;
 }catch(e){sess=null;del('orbit.__sess');msg=__t("Giriş tamamlanamadı.");emit();return}
 }
-if(h.get('error_description')){history.replaceState(null,'',location.pathname+location.search);if(get('orbit.__link')){linking=jget('orbit.__link',null);endLink('')}msg=__t("Google girişi iptal edildi ya da başarısız oldu.");emit()}
+if(h.get('error_description')){HOST_HIST.replaceState(null,'',HOST_LOC.pathname+HOST_LOC.search);if(get('orbit.__link')){linking=jget('orbit.__link',null);endLink('')}msg=__t("Google girişi iptal edildi ya da başarısız oldu.");emit()}
 if(sess){try{await link()}catch(e){emit()}}
 }
 window.addEventListener('online',()=>{if(sess){link().catch(()=>{})}});
@@ -1888,7 +1890,7 @@ this.show('interstitial',null,()=>next());
 },
 };
 window.orbitAdResult=r=>Ads.done(r||{});
-const APP_VERSION='2.5.0';
+const APP_VERSION='2.5.1';
 const Rec={
 t0:0,rots:0,rotPops:0,pauses:0,moves:[],lastMoveT:0,
 start(){this.t0=performance.now();this.lastMoveT=this.t0;this.rots=0;this.revives=0;this.rotPops=0;this.pauses=0;this.moves=[];this.rotsTotal=0;this.startedAt=new Date().toISOString();this.dda={enabled:dda.enabled,level:dda.level,skill:Math.round(dda.skill)}},
@@ -5723,15 +5725,15 @@ box.scrollTo({top:Math.max(0,y),behavior:(typeof reduceMotion!=='undefined'&&red
 const WEBAPP=!IN_APP&&!!document.querySelector('link[rel="manifest"]');
 const IS_IOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
 const IS_ANDROID=/Android/i.test(navigator.userAgent);
-const standalone=()=>{try{return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}};
+const standalone=()=>{try{if(matchMedia('(display-mode: standalone)').matches||navigator.standalone===true||localStorage.getItem('orbitd.standalone')==='1')return true;if(IN_SRCDOC)return window.top.matchMedia('(display-mode: standalone)').matches||window.top.navigator.standalone===true}catch(e){}return false};
 let installEvt=null;
-if(WEBAPP&&'serviceWorker'in navigator&&window.isSecureContext)addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
+if(WEBAPP&&!IN_SRCDOC&&'serviceWorker'in navigator&&window.isSecureContext)addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{})});
 addEventListener('beforeinstallprompt',e=>{if(!WEBAPP)return;e.preventDefault();installEvt=e;paintInstall()});
 addEventListener('appinstalled',()=>{installEvt=null;$('instOv').hidden=true;paintInstall();note(__t('ORBİT ana ekrana eklendi',[]))});
 const canInstall=()=>WEBAPP&&!standalone()&&(IS_IOS||!!installEvt);
 function paintInstall(){const r=$('instRow');if(r)r.hidden=!canInstall();const a=$('apkRow');if(a)a.hidden=!(WEBAPP&&IS_ANDROID)}
 function openInstall(){
-if(!WEBAPP)return;const img=document.querySelector('#instOv .inst-ic');if(img&&!img.src)img.src=img.dataset.src;
+if(!WEBAPP)return;
 const ios=IS_IOS&&!installEvt,safari=IS_IOS&&/Safari\//.test(navigator.userAgent)&&!/CriOS|FxiOS|EdgiOS/.test(navigator.userAgent);
 $('instIos').hidden=!ios;$('instGo').hidden=ios;
 $('instNote').hidden=!(ios&&!safari);$('instNote').textContent=__t('Bu adımlar Safari içindir. Başka bir tarayıcıdaysan sayfayı Safari\'de aç.',[]);

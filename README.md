@@ -12,6 +12,9 @@ Halkaları döndürüp aynı renkleri buluşturduğun bir bulmaca oyunu.
 Yeni sürüm eskisinin üstüne kurulur; oyun ilerlemen silinmez (1.8.3'ten geçiş hariç, aşağıya bak).
 
 
+## Her zaman en son sürüm
+Doğrudan indirme (QR kodu da bu adresi açar): https://raw.githubusercontent.com/dragony1905/apk/main/ORBIT.apk — her yeni sürümde güncellenir.
+
 ## iPhone, iPad ve bilgisayar: web sitesi
 APK yalnızca Android'de çalışır. iPhone'da ve bilgisayarda oyun tarayıcıdan oynanır:
 

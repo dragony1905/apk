@@ -1,6 +1,6 @@
 // ORBİT web sürümü: internetsiz çalışma. Strateji "önce ağ": internet varken her açılışta en yeni sürüm yüklenir,
 // yoksa son kaydedilen sürüm açılır. Çevrim içi sunucu istekleri (başka adres) hiç önbelleğe alınmaz.
-const CACHE = 'orbit-2.5.1';
+const CACHE = 'orbit-2.6.0';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {

@@ -2,20 +2,21 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "2.6.0",
-    "code": 32,
-    "previous": "2.5.1",
+    "version": "2.6.1",
+    "code": 33,
+    "previous": "2.6.0",
     "date": "2026-10-31",
-    "title": "Oyunu paylaş: bağlantılar ve QR kodlar",
-    "notes": "Ayarlar → Genel → Oyunu paylaş: web sitesi ve Android uygulamasının bağlantısı ve QR kodu.",
+    "title": "Oyunu paylaş artık ana menüde",
+    "notes": "Paylaş düğmesi ana menünün üst çubuğuna taşındı.",
     "added": [
-      "Oyunu paylaş ekranı: web sitesi ve Android uygulaması için bağlantı ve QR kod",
-      "Bağlantıyı kopyalama ve paylaşma"
+      "Ana menüde Oyunu paylaş düğmesi (bağlantı ve QR kod)"
     ],
-    "fixed": [],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.6.0.apk",
-    "size": 6333095,
-    "sha256": "b7f827a47ea8f1d42ee48e05463f197979a297bf12d99b748a209444cc18c139",
+    "fixed": [
+      "Dar ekranlarda üst çubukta adın kesilmesi"
+    ],
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.6.1.apk",
+    "size": 6333299,
+    "sha256": "5b81013984ea1983c9aa5427ae2aa2e630ccf1f5ddc3315321f566ca0e2c06f5",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

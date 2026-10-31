@@ -2,23 +2,20 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "2.4.0",
-    "code": 29,
-    "previous": "2.3.0",
+    "version": "2.5.0",
+    "code": 30,
+    "previous": "2.4.0",
     "date": "2026-10-31",
-    "title": "Kutulardan artık her şey çıkabilir",
-    "notes": "Kupa Yolu ve başarı ödülleri, özel set ve arayüz temaları da kutulardan çıkabiliyor. Eski yollar da aynen geçerli.",
+    "title": "ORBİT artık web sitesinde de: iPhone'da oynanır",
+    "notes": "Oyunun web sitesi sürümü eklendi. iPhone ve bilgisayarda tarayıcıdan oynanır, ana ekrana eklenince uygulama gibi açılır.",
     "added": [
-      "Kupa Yolu ödülleri kutulardan da çıkabilir",
-      "Başarı ödülleri (küreler, halkalar, efektler, rozetler, paletler) kutulardan da çıkabilir",
-      "Şampiyonluk Kupaları seti efsanevi kutudan da çıkabilir",
-      "Gece Mavisi, Orman, Okyanus, Gün Batımı, Şeker Dünyası, Galaksi ve Altın arayüz temaları kutulardan da çıkabilir",
-      "Kutudan çıkan arayüz teması kutu ekranından hemen uygulanabilir"
+      "Web sitesi sürümü: iPhone, iPad ve bilgisayarda tarayıcıdan oynanır",
+      "Ana ekrana eklenince tam ekran uygulama gibi açılır, internetsiz de çalışır"
     ],
     "fixed": [],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.4.0.apk",
-    "size": 6326587,
-    "sha256": "e87c488e3457b724c1e9e03bdc3a0160f32a83a4c5ffe0b013e0b6d8972a09ca",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.5.0.apk",
+    "size": 6328387,
+    "sha256": "a68544e3918f266424ab59969bc58843554da0bb75299c0490f00db2cd463cf9",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

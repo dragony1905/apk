@@ -11,6 +11,16 @@ Halkaları döndürüp aynı renkleri buluşturduğun bir bulmaca oyunu.
 
 Yeni sürüm eskisinin üstüne kurulur; oyun ilerlemen silinmez (1.8.3'ten geçiş hariç, aşağıya bak).
 
+
+## iPhone, iPad ve bilgisayar: web sitesi
+APK yalnızca Android'de çalışır. iPhone'da ve bilgisayarda oyun tarayıcıdan oynanır:
+
+**https://dragony1905.github.io/apk/**
+
+- iPhone/iPad: sayfayı **Safari**'de aç → alttaki **Paylaş** düğmesi → **Ana Ekrana Ekle** → **Ekle**. ORBİT ana ekranda uygulama gibi tam ekran açılır, internetsiz de oynanır.
+- Android'de Chrome'da da açılabilir ("Ana ekrana ekle"), ama Android için APK önerilir.
+- Web sürümü her açılışta en son sürümü yükler; ilerleme o cihazın tarayıcısında saklanır (hesapla giriş yaparsan bulutta da).
+
 ## Dosyanın değişmediğini doğrula (isteğe bağlı)
 Her sürümün yanında `.sha256` dosyası vardır. Bilgisayarda şu komutu çalıştır:
 

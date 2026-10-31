@@ -2,25 +2,23 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "2.3.0",
-    "code": 28,
-    "previous": "2.2.0",
+    "version": "2.4.0",
+    "code": 29,
+    "previous": "2.3.0",
     "date": "2026-10-31",
-    "title": "Top renkleri, uygulama içi güncelleme ve yeni ayarlar",
-    "notes": "Topların renklerini artık kendin seçebilirsin. Bundan sonraki sürümler oyunun içinden indirilip kurulabilecek.",
+    "title": "Kutulardan artık her şey çıkabilir",
+    "notes": "Kupa Yolu ve başarı ödülleri, özel set ve arayüz temaları da kutulardan çıkabiliyor. Eski yollar da aynen geçerli.",
     "added": [
-      "Top renkleri ekranı: 19 hazır palet, HEX kodu, renk seçici, 20 kişisel palet",
-      "Uygulama içi güncelleme (indirme, doğrulama, Android kurulum onayı)",
-      "Ayarlar bölümlere ayrıldı",
-      "Top işaretlerini açıp kapatma ve renk körü dostu renkler"
+      "Kupa Yolu ödülleri kutulardan da çıkabilir",
+      "Başarı ödülleri (küreler, halkalar, efektler, rozetler, paletler) kutulardan da çıkabilir",
+      "Şampiyonluk Kupaları seti efsanevi kutudan da çıkabilir",
+      "Gece Mavisi, Orman, Okyanus, Gün Batımı, Şeker Dünyası, Galaksi ve Altın arayüz temaları kutulardan da çıkabilir",
+      "Kutudan çıkan arayüz teması kutu ekranından hemen uygulanabilir"
     ],
-    "fixed": [
-      "Ayarlar ekranında başlığın üstünden içerik görünmesi",
-      "Temalar ekranından geri tuşuyla çıkınca önizlemenin kalması"
-    ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.3.0.apk",
-    "size": 6326079,
-    "sha256": "f0eed45856e669136ef63dd40e906f02f612c4afc950a07aa2d528ae1162d97e",
+    "fixed": [],
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.4.0.apk",
+    "size": 6326587,
+    "sha256": "e87c488e3457b724c1e9e03bdc3a0160f32a83a4c5ffe0b013e0b6d8972a09ca",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

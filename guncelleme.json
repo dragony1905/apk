@@ -2,21 +2,20 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "2.6.1",
-    "code": 33,
-    "previous": "2.6.0",
+    "version": "2.7.0",
+    "code": 34,
+    "previous": "2.6.1",
     "date": "2026-10-31",
-    "title": "Oyunu paylaş artık ana menüde",
-    "notes": "Paylaş düğmesi ana menünün üst çubuğuna taşındı.",
+    "title": "Ayarlar ve bütün menüler artık tanıtılıyor",
+    "notes": "Her ekran ilk açıldığında ne işe yaradığını adım adım gösteriyor. Ayarlar → Tanıtımlar'dan yeniden izleyebilirsin.",
     "added": [
-      "Ana menüde Oyunu paylaş düğmesi (bağlantı ve QR kod)"
+      "Ekran tanıtımları: Ayarlar, Mağaza, Koleksiyon, Başarımlar, Kupa Yolu, Profil ve diğer bütün menüler",
+      "Ayarlar → Tanıtımlar: bütün tanıtımları yeniden göster"
     ],
-    "fixed": [
-      "Dar ekranlarda üst çubukta adın kesilmesi"
-    ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.6.1.apk",
-    "size": 6333299,
-    "sha256": "5b81013984ea1983c9aa5427ae2aa2e630ccf1f5ddc3315321f566ca0e2c06f5",
+    "fixed": [],
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.7.0.apk",
+    "size": 6338359,
+    "sha256": "3e94daf5ed2d96dea57ae0b60044da5865daaad5aa878550ea1f2c2dce8d825f",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

@@ -2,9 +2,9 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "2.5.0",
-    "code": 30,
-    "previous": "2.4.0",
+    "version": "2.5.1",
+    "code": 31,
+    "previous": "2.5.0",
     "date": "2026-10-31",
     "title": "ORBİT artık web sitesinde de: iPhone'da oynanır",
     "notes": "Oyunun web sitesi sürümü eklendi. iPhone ve bilgisayarda tarayıcıdan oynanır, ana ekrana eklenince uygulama gibi açılır.",
@@ -13,9 +13,9 @@
       "Ana ekrana eklenince tam ekran uygulama gibi açılır, internetsiz de çalışır"
     ],
     "fixed": [],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.5.0.apk",
-    "size": 6328387,
-    "sha256": "a68544e3918f266424ab59969bc58843554da0bb75299c0490f00db2cd463cf9",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.5.1.apk",
+    "size": 6328543,
+    "sha256": "07937eff99efa1efd6151d38e773b02e3f436a6a79df96eb42184383e2099505",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

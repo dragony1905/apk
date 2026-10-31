@@ -15,7 +15,7 @@ Yeni sürüm eskisinin üstüne kurulur; oyun ilerlemen silinmez (1.8.3'ten geç
 ## iPhone, iPad ve bilgisayar: web sitesi
 APK yalnızca Android'de çalışır. iPhone'da ve bilgisayarda oyun tarayıcıdan oynanır:
 
-**https://dragony1905.github.io/apk/**
+**https://orbit-pocket-play.lovable.app**
 
 - iPhone/iPad: sayfayı **Safari**'de aç → alttaki **Paylaş** düğmesi → **Ana Ekrana Ekle** → **Ekle**. ORBİT ana ekranda uygulama gibi tam ekran açılır, internetsiz de oynanır.
 - Android'de Chrome'da da açılabilir ("Ana ekrana ekle"), ama Android için APK önerilir.

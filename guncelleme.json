@@ -2,20 +2,21 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "2.7.0",
-    "code": 34,
-    "previous": "2.6.1",
-    "date": "2026-10-31",
-    "title": "Ayarlar ve bütün menüler artık tanıtılıyor",
-    "notes": "Her ekran ilk açıldığında ne işe yaradığını adım adım gösteriyor. Ayarlar → Tanıtımlar'dan yeniden izleyebilirsin.",
+    "version": "2.8.0",
+    "code": 35,
+    "previous": "2.7.0",
+    "date": "2026-11-03",
+    "title": "Oyuncu profilleri ve koleksiyon önizlemesi",
+    "notes": "Sıralamada ve arkadaşlarda oyunculara dokunup profillerini görebilir, koleksiyondaki parçaları almadan önce önizleyebilirsin.",
     "added": [
-      "Ekran tanıtımları: Ayarlar, Mağaza, Koleksiyon, Başarımlar, Kupa Yolu, Profil ve diğer bütün menüler",
-      "Ayarlar → Tanıtımlar: bütün tanıtımları yeniden göster"
+      "Koleksiyon önizlemesi: parçaya ya da sete dokununca nasıl göründüğünü gör, efektleri izle, sesleri dinle",
+      "Diğer oyuncuların tam ekran profili: sıralamada ya da arkadaş listesinde oyuncuya dokun, arkadaş ekle",
+      "Profil fotoğrafı için 'Fotoğrafım diğer oyunculara görünsün' seçeneği"
     ],
     "fixed": [],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.7.0.apk",
-    "size": 6338359,
-    "sha256": "3e94daf5ed2d96dea57ae0b60044da5865daaad5aa878550ea1f2c2dce8d825f",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.8.0.apk",
+    "size": 6345051,
+    "sha256": "075c80ab25dae10683e47ce96bc6cd4caf21dbe9e01f8fc33b8b7d48a418267e",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

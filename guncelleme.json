@@ -2,26 +2,20 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "2.9.0",
-    "code": 36,
-    "previous": "2.8.0",
+    "version": "2.9.1",
+    "code": 37,
+    "previous": "2.9.0",
     "date": "2026-11-04",
-    "title": "ORBİT müziği, yeni koleksiyon ekranı ve daha adil oyun",
-    "notes": "Oyunun kendi müziği geldi, koleksiyon ekranı yenilendi, oyun biraz kolaylaştı ve daha çok altın kazanılıyor.",
-    "added": [
-      "ORBİT teması: oyunun kendi müziği (Ayarlar → Müzik tarzı)",
-      "Yeni koleksiyon ekranı: ilerleme kartı, set kartları, parça kutucukları, 'Sahip olduklarım' filtresi",
-      "Yeni yazı tipi (Poppins) ve Ayarlar → Yazı tipi: yazı tipi ve yazı boyutu seçimi",
-      "Kutular: bronzdan yaygın, gümüşten nadir, altından epik ve efsanevi kozmetik; sahip olduğun bir daha çıkmaz",
-      "Her 15 puana 1 altın"
-    ],
+    "title": "Ekran geçişi düzeltmesi",
+    "notes": "Menüler arasında geçerken oyun alanının bir an siyah görünmesi düzeltildi.",
+    "added": [],
     "fixed": [
-      "Bir hamlede en fazla 2 taş gelir",
-      "Telefonda çekilen fotoğraflar (HEIC, büyük ya da yan duran) profil resmi yapılabilir"
+      "Menüden oyuna dönerken oyun alanı bir an siyah görünmüyor",
+      "Ekran geçişleri daha akıcı"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.9.0.apk",
-    "size": 7223000,
-    "sha256": "57ebee1c2b015b0011543afcf59f1536ea25cd24ee8af2c3b92a25823fbf1243",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.9.1.apk",
+    "size": 7223076,
+    "sha256": "aafd1be9a78d6b799b18003edc8ee3764e7f31ab58948e21efece29ed2d82a23",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

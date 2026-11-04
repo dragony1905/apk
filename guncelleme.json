@@ -2,23 +2,20 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "3.0.1",
-    "code": 40,
-    "previous": "3.0.0",
+    "version": "3.0.2",
+    "code": 41,
+    "previous": "3.0.1",
     "date": "2026-11-04",
-    "title": "Daha hızlı açılış ve 120 FPS",
-    "notes": "Oyun daha hızlı açılıyor. Ayarlar'a kare hızı (FPS) seçimi eklendi: 30, 60 ya da 120 FPS (varsayılan 120, ekranın destekliyorsa).",
-    "added": [
-      "Ayarlar → Akıcılık: 30 / 60 / 120 FPS (varsayılan 120)",
-      "Telefon destekliyorsa 90/120 Hz yüksek yenileme hızı"
-    ],
+    "title": "Açılıştaki boş ekran düzeltildi",
+    "notes": "Oyun açılırken logo ve menü artık hemen görünüyor; telefon meşgulken boş ekran kalmıyor.",
+    "added": [],
     "fixed": [
-      "Açılışta görünen boş ekran kısaldı, yerine ORBİT simgesi çıkıyor",
-      "Açılışta görünen kaydırma çubuğu kaldırıldı"
+      "Açılışta görünen boş ekran düzeltildi: logo ve menü ilk anda görünüyor",
+      "Ekran geçişlerinde içerik bir an görünmez kalmıyor"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.0.1.apk",
-    "size": 7236304,
-    "sha256": "7f1729cf779fd11fe3125e56d050b9587eefa856120abba179c467b302868213",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.0.2.apk",
+    "size": 7236300,
+    "sha256": "d39a01c7f88d10acd615676f6a86cd80d2734d663490f903a3ba03a93ae9ec7b",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

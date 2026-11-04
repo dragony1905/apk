@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-558c7ERN+cQybZqgBkNiHAItPw3SXGBS0ATx+kg467g=' 'sha256-dnJi0Chb0KYJAzM10TCupnwMMXRydukMyhlbKaVnLfg=' 'sha256-w/WUq62qaHRemZCDD7sKLlHedBUsVGT0aWOqOb8nkuQ=' 'sha256-DtXJIytJc9sAzMGXtGquDL2dk6U4vZs/fi3XRVtrtB8=' 'sha256-okNxuZYDWIYsacURM7hT0b+Lq8Zy0NIWId8IjOKpKrk=' 'sha256-vrkHiV9nXIaL1pzzFkb3m3G9HHB5Z7IBXhIb421jgD8=' 'sha256-xL3BwlKyjND+k0eGrf1N8tqgtUNvykD2AxDgZH40laY='; style-src 'unsafe-inline'; img-src data: blob: 'self'; font-src data:; connect-src 'self' https://c--11fd4de8-1fa4-417e-b2d7-5336fc077063-prod.lovable.cloud https://orbit-pocket-play.lovable.app; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-558c7ERN+cQybZqgBkNiHAItPw3SXGBS0ATx+kg467g=' 'sha256-dnJi0Chb0KYJAzM10TCupnwMMXRydukMyhlbKaVnLfg=' 'sha256-w/WUq62qaHRemZCDD7sKLlHedBUsVGT0aWOqOb8nkuQ=' 'sha256-DtXJIytJc9sAzMGXtGquDL2dk6U4vZs/fi3XRVtrtB8=' 'sha256-okNxuZYDWIYsacURM7hT0b+Lq8Zy0NIWId8IjOKpKrk=' 'sha256-vrkHiV9nXIaL1pzzFkb3m3G9HHB5Z7IBXhIb421jgD8=' 'sha256-T7e33/0W6ufMhtKdcir4BONOTQPwAm7a6yvJWOT8BSs='; style-src 'unsafe-inline'; img-src data: blob: 'self'; font-src data:; connect-src 'self' https://c--11fd4de8-1fa4-417e-b2d7-5336fc077063-prod.lovable.cloud https://orbit-pocket-play.lovable.app; media-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
@@ -2107,7 +2107,7 @@ this.show('interstitial',null,()=>next());
 },
 };
 window.orbitAdResult=r=>Ads.done(r||{});
-const APP_VERSION='3.0.2';
+const APP_VERSION='3.0.3';
 const Rec={
 t0:0,rots:0,rotPops:0,pauses:0,moves:[],lastMoveT:0,
 start(){this.t0=performance.now();this.lastMoveT=this.t0;this.rots=0;this.revives=0;this.rotPops=0;this.pauses=0;this.moves=[];this.rotsTotal=0;this.startedAt=new Date().toISOString();this.dda={enabled:dda.enabled,level:dda.level,skill:Math.round(dda.skill)}},
@@ -6791,6 +6791,11 @@ renderRules();
 if(Profiles.active())openMenu();else openProfileForm('first');
 (function splash(){
 const sp=$('splash');if(!sp)return;
+if(window.OrbitNative&&typeof window.OrbitNative.appReady==='function'){
+sp.remove();try{localStorage.setItem('orbitd.seen','1')}catch(e){}
+setTimeout(()=>{try{window.OrbitNative.appReady()}catch(e){}setTimeout(()=>{try{maybeTour()}catch(e){}},300)},30);
+return;
+}
 let seen=false;try{seen=localStorage.getItem('orbitd.seen')==='1';localStorage.setItem('orbitd.seen','1')}catch(e){}
 if(seen||REDUCED)sp.classList.add('quick');
 let done=false;const finish=()=>{if(done)return;done=true;sp.classList.add('out');setTimeout(()=>{sp.remove();maybeTour()},400)};

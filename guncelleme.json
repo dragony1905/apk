@@ -2,20 +2,22 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "3.0.2",
-    "code": 41,
-    "previous": "3.0.1",
+    "version": "3.0.3",
+    "code": 42,
+    "previous": "3.0.2",
     "date": "2026-11-04",
-    "title": "Açılıştaki boş ekran düzeltildi",
-    "notes": "Oyun açılırken logo ve menü artık hemen görünüyor; telefon meşgulken boş ekran kalmıyor.",
-    "added": [],
-    "fixed": [
-      "Açılışta görünen boş ekran düzeltildi: logo ve menü ilk anda görünüyor",
-      "Ekran geçişlerinde içerik bir an görünmez kalmıyor"
+    "title": "Tek açılış ekranı, ORBİT logosuyla",
+    "notes": "Oyun açılırken artık tek bir açılış ekranı var: ORBİT logosu ve yazısı. Menü hazır olunca doğrudan menü geliyor.",
+    "added": [
+      "Açılış ekranında ORBİT logosu ve yazısı"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.0.2.apk",
-    "size": 7236300,
-    "sha256": "d39a01c7f88d10acd615676f6a86cd80d2734d663490f903a3ba03a93ae9ec7b",
+    "fixed": [
+      "Açılışta art arda çıkan üç ekran teke indi",
+      "Açılıştaki beyaz/boş ekran kaldırıldı"
+    ],
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.0.3.apk",
+    "size": 7241912,
+    "sha256": "6fe927ed8648dafa9a65ac9c360b18d17da2f0722ac6cef498b47e05a555db09",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

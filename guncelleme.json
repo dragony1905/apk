@@ -2,24 +2,23 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "3.0.0",
-    "code": 39,
-    "previous": "2.9.1",
+    "version": "3.0.1",
+    "code": 40,
+    "previous": "3.0.0",
     "date": "2026-11-04",
-    "title": "VS ekranı, yeni sesler ve yazı tipi",
-    "notes": "Ana menüye VS (çevrimiçi 1'e 1) bölümü eklendi. Çevrimiçi maçlar sunucu kurulumu tamamlanınca açılacak. Varsayılan yazı tipi artık telefonunun yazı tipi, oyun sesleri yenilendi.",
+    "title": "Daha hızlı açılış ve 120 FPS",
+    "notes": "Oyun daha hızlı açılıyor. Ayarlar'a kare hızı (FPS) seçimi eklendi: 30, 60 ya da 120 FPS (varsayılan 120, ekranın destekliyorsa).",
     "added": [
-      "VS bölümü: Hızlı Maç, Dostluk Maçı (oda kodu ve davet) ve Dereceli Maç (çevrimiçi maçlar yakında açılacak)",
-      "Yeni varsayılan oyun sesleri",
-      "Varsayılan yazı tipi telefonunun kendi yazı tipi"
+      "Ayarlar → Akıcılık: 30 / 60 / 120 FPS (varsayılan 120)",
+      "Telefon destekliyorsa 90/120 Hz yüksek yenileme hızı"
     ],
     "fixed": [
-      "Koleksiyonda bir parçaya dokunup bakınca \"Yeni\" yazısı kalkıyor, seçmek gerekmiyor",
-      "Oyuncu profilinde üst üste binen yazılar düzeltildi"
+      "Açılışta görünen boş ekran kısaldı, yerine ORBİT simgesi çıkıyor",
+      "Açılışta görünen kaydırma çubuğu kaldırıldı"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.0.0.apk",
-    "size": 7235780,
-    "sha256": "12cd0feec88cbc37c52cf67f1803facd99aa75ec29ee015b35171b22340337f8",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.0.1.apk",
+    "size": 7236304,
+    "sha256": "7f1729cf779fd11fe3125e56d050b9587eefa856120abba179c467b302868213",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

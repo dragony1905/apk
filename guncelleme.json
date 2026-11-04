@@ -2,20 +2,24 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "2.9.1",
-    "code": 37,
-    "previous": "2.9.0",
+    "version": "3.0.0",
+    "code": 39,
+    "previous": "2.9.1",
     "date": "2026-11-04",
-    "title": "Ekran geçişi düzeltmesi",
-    "notes": "Menüler arasında geçerken oyun alanının bir an siyah görünmesi düzeltildi.",
-    "added": [],
-    "fixed": [
-      "Menüden oyuna dönerken oyun alanı bir an siyah görünmüyor",
-      "Ekran geçişleri daha akıcı"
+    "title": "VS ekranı, yeni sesler ve yazı tipi",
+    "notes": "Ana menüye VS (çevrimiçi 1'e 1) bölümü eklendi. Çevrimiçi maçlar sunucu kurulumu tamamlanınca açılacak. Varsayılan yazı tipi artık telefonunun yazı tipi, oyun sesleri yenilendi.",
+    "added": [
+      "VS bölümü: Hızlı Maç, Dostluk Maçı (oda kodu ve davet) ve Dereceli Maç (çevrimiçi maçlar yakında açılacak)",
+      "Yeni varsayılan oyun sesleri",
+      "Varsayılan yazı tipi telefonunun kendi yazı tipi"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-2.9.1.apk",
-    "size": 7223076,
-    "sha256": "aafd1be9a78d6b799b18003edc8ee3764e7f31ab58948e21efece29ed2d82a23",
+    "fixed": [
+      "Koleksiyonda bir parçaya dokunup bakınca \"Yeni\" yazısı kalkıyor, seçmek gerekmiyor",
+      "Oyuncu profilinde üst üste binen yazılar düzeltildi"
+    ],
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.0.0.apk",
+    "size": 7235780,
+    "sha256": "12cd0feec88cbc37c52cf67f1803facd99aa75ec29ee015b35171b22340337f8",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

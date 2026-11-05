@@ -2,24 +2,24 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "3.2.0",
-    "code": 44,
-    "previous": "3.1.0",
-    "date": "2026-11-05",
-    "title": "Mesaj düzenleme, yazıyor ve sohbet arka planı",
-    "notes": "Mesajlarını düzenleyip geri alabilir, sohbetlere kendi fotoğrafını arka plan yapabilirsin. Arkadaşının yazdığını ve çevrimiçi olduğunu görebilirsin.",
+    "version": "3.2.1",
+    "code": 45,
+    "previous": "3.2.0",
+    "date": "2026-11-06",
+    "title": "Sohbet düzeltmeleri, sabitleme ve sohbeti temizleme",
+    "notes": "Klavye ve sohbet açılışıyla ilgili sorunlar düzeltildi. Mesajlar'da bir kişiye basılı tutarak sohbeti başa sabitleyebilir ya da tüm mesajları silebilirsin.",
     "added": [
-      "Mesajı düzenle (15 dakika içinde) ve herkesten geri al",
-      "Sohbet arka planı: galeriden fotoğraf seç, bir sohbete ya da hepsine",
-      "\"Yazıyor\" balonu, çevrimiçi ve son görülme bilgisi",
-      "Ayarlar → Mesajlar: görüldü bilgisi ve çevrimiçi durumu kapatılabilir"
+      "Mesajlar'da basılı tut: başa sabitle, tüm mesajları sil (yalnızca bu cihazda), profili gör"
     ],
     "fixed": [
-      "Alt menü sadeleşti: İstatistikler artık profilde"
+      "Klavye açılırken ekran beyazlamıyor",
+      "Mesaj gönderince klavye kapanmıyor",
+      "Sohbete girince mesajlar hemen görünüyor",
+      "Klavye açılınca son mesajlar görünür kalıyor, arka plan fotoğrafı titremiyor"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.2.0.apk",
-    "size": 7254784,
-    "sha256": "d15eafb45dad734dd0550386f40a89de67d139a1da4e53331a8a3b10cdfbe668",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.2.1.apk",
+    "size": 7256848,
+    "sha256": "38eae0ddcf86f6506b45aeeea9fca10e9fec2a2473a5baf990d22248419c7d7a",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

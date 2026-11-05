@@ -2,25 +2,24 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "3.1.0",
-    "code": 43,
-    "previous": "3.0.3",
+    "version": "3.2.0",
+    "code": 44,
+    "previous": "3.1.0",
     "date": "2026-11-05",
-    "title": "Mesajlar ve gruplar",
-    "notes": "Ana menüye Mesajlar bölümü eklendi: arkadaşlarınla birebir yazış ya da grup kur. Varsayılan müzik Piyano oldu.",
+    "title": "Mesaj düzenleme, yazıyor ve sohbet arka planı",
+    "notes": "Mesajlarını düzenleyip geri alabilir, sohbetlere kendi fotoğrafını arka plan yapabilirsin. Arkadaşının yazdığını ve çevrimiçi olduğunu görebilirsin.",
     "added": [
-      "Mesajlar: arkadaşlarla birebir sohbet (okunmamış rozeti, Görüldü)",
-      "Gruplar: arkadaşlarınla en fazla 20 kişilik grup kur, üye ekle/çıkar, adını değiştir",
-      "Güvenlik: küfür süzgeci, bağlantı ve telefon numarası engeli, şikâyet ve engelleme",
-      "VS maç sonuçları artık sunucuda doğrulanıyor, dereceli maçta lig puanı güncelleniyor"
+      "Mesajı düzenle (15 dakika içinde) ve herkesten geri al",
+      "Sohbet arka planı: galeriden fotoğraf seç, bir sohbete ya da hepsine",
+      "\"Yazıyor\" balonu, çevrimiçi ve son görülme bilgisi",
+      "Ayarlar → Mesajlar: görüldü bilgisi ve çevrimiçi durumu kapatılabilir"
     ],
     "fixed": [
-      "Varsayılan müzik Piyano",
-      "Menü düğmelerinin yazıları her telefonda sığıyor"
+      "Alt menü sadeleşti: İstatistikler artık profilde"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.1.0.apk",
-    "size": 7251132,
-    "sha256": "6cbfa08c284e8f170095ffb027bdf10e66bc52f3c1d22a0140ba02e769272167",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.2.0.apk",
+    "size": 7254784,
+    "sha256": "d15eafb45dad734dd0550386f40a89de67d139a1da4e53331a8a3b10cdfbe668",
     "minCode": 1,
     "mandatory": false,
     "reason": ""

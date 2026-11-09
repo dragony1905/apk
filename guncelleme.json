@@ -2,26 +2,34 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "3.2.1",
-    "code": 45,
-    "previous": "3.2.0",
-    "date": "2026-11-06",
-    "title": "Sohbet düzeltmeleri, sabitleme ve sohbeti temizleme",
-    "notes": "Klavye ve sohbet açılışıyla ilgili sorunlar düzeltildi. Mesajlar'da bir kişiye basılı tutarak sohbeti başa sabitleyebilir ya da tüm mesajları silebilirsin.",
+    "version": "3.3.0",
+    "code": 46,
+    "previous": "3.2.1",
+    "date": "2026-11-09",
+    "title": "ORBİT artık bilgisayarda",
+    "notes": "ORBİT'in Windows uygulaması çıktı. Aynı hesapla bilgisayarda da oynayabilirsin.",
     "added": [
-      "Mesajlar'da basılı tut: başa sabitle, tüm mesajları sil (yalnızca bu cihazda), profili gör"
+      "Windows uygulaması (ORBIT-Setup.exe ile kurulur)",
+      "Bilgisayarda Google ile giriş tarayıcı üzerinden yapılır"
     ],
     "fixed": [
-      "Klavye açılırken ekran beyazlamıyor",
-      "Mesaj gönderince klavye kapanmıyor",
-      "Sohbete girince mesajlar hemen görünüyor",
-      "Klavye açılınca son mesajlar görünür kalıyor, arka plan fotoğrafı titremiyor"
+      "Mesaj gönderildikten sonra kısa süre \"yazıyor\" görünmesi"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.2.1.apk",
-    "size": 7256848,
-    "sha256": "38eae0ddcf86f6506b45aeeea9fca10e9fec2a2473a5baf990d22248419c7d7a",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.3.0.apk",
+    "size": 7258024,
+    "sha256": "cd8077530963bf81ef0bca02f196fef4329147a5a9cea2cbe2961b62053fdc9c",
     "minCode": 1,
     "mandatory": false,
     "reason": ""
+  },
+  "windows": {
+    "version": "3.3.0",
+    "code": 46,
+    "previous": "3.2.1",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-Setup-3.3.0.exe",
+    "size": 3279745,
+    "sha256": "114f3f8ac7c937fafd42e8b2341567c550a477b30dcddb11d17f13c466269bc0",
+    "minCode": 1,
+    "mandatory": false
   }
 }

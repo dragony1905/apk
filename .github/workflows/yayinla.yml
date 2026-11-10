@@ -1,10 +1,11 @@
 name: Sürümü yayınla
 
 # surumler/ klasörüne yeni bir ORBIT-<sürüm>.apk eklenince GitHub "Releases" sayfasında v<sürüm> sürümü oluşturulur.
+# 3.4: aynı sürümün Windows kurulum dosyası (ORBIT-Setup-<sürüm>.exe) varsa o da sürüme eklenir; eksikse sonradan eklenir.
 on:
   push:
     branches: [ main ]
-    paths: [ 'surumler/*.apk' ]
+    paths: [ 'surumler/*.apk', 'surumler/*.exe', '.github/workflows/yayinla.yml' ]
   workflow_dispatch:
 
 permissions:
@@ -24,9 +25,25 @@ jobs:
         run: |
           for apk in surumler/ORBIT-*.apk; do
             VER=$(basename "$apk" .apk); VER=${VER#ORBIT-}
-            if gh release view "v$VER" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then continue; fi
+            EXE="surumler/ORBIT-Setup-$VER.exe"
+            if gh release view "v$VER" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+              # sürüm var: Windows dosyası sonradan geldiyse ekle
+              if [ -f "$EXE" ] && ! gh release view "v$VER" --repo "$GITHUB_REPOSITORY" --json assets -q '.assets[].name' | grep -qx "ORBIT-Setup-$VER.exe"; then
+                ( cd surumler && sha256sum -c "ORBIT-Setup-$VER.exe.sha256" )
+                gh release upload "v$VER" "$EXE" "$EXE.sha256" --repo "$GITHUB_REPOSITORY"
+                gh release edit "v$VER" --repo "$GITHUB_REPOSITORY" --notes "ORBİT $VER. Android: ORBIT-$VER.apk · Windows: ORBIT-Setup-$VER.exe. Dosyaların değişmediğini SHA-256 özetleriyle (.sha256) doğrulayabilirsin."
+              fi
+              continue
+            fi
             ( cd surumler && sha256sum -c "ORBIT-$VER.apk.sha256" )      # özet tutmazsa yayınlanmaz
-            gh release create "v$VER" "$apk" "surumler/ORBIT-$VER.apk.sha256" --repo "$GITHUB_REPOSITORY" \
-              --target "$GITHUB_SHA" --title "ORBİT $VER" --latest \
-              --notes "ORBİT $VER. İndir: ORBIT-$VER.apk. Dosyanın değişmediğini SHA-256 özetiyle doğrulayabilirsin (ORBIT-$VER.apk.sha256)."
+            FILES=("$apk" "surumler/ORBIT-$VER.apk.sha256"); NOTES="ORBİT $VER. İndir: ORBIT-$VER.apk. Dosyanın değişmediğini SHA-256 özetiyle doğrulayabilirsin (ORBIT-$VER.apk.sha256)."
+            if [ -f "$EXE" ]; then
+              ( cd surumler && sha256sum -c "ORBIT-Setup-$VER.exe.sha256" )
+              FILES+=("$EXE" "$EXE.sha256"); NOTES="ORBİT $VER. Android: ORBIT-$VER.apk · Windows: ORBIT-Setup-$VER.exe. Dosyaların değişmediğini SHA-256 özetleriyle (.sha256) doğrulayabilirsin."
+            fi
+            gh release create "v$VER" "${FILES[@]}" --repo "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" --title "ORBİT $VER" --latest=false --notes "$NOTES"
           done
+          # en son sürüm (sürüm numarasına göre) "Latest" olarak işaretlenir
+          LATEST=$(ls surumler/ORBIT-*.apk | sed -E 's#.*/ORBIT-(.*)\.apk#\1#' | sort -V | tail -1)
+          gh release edit "v$LATEST" --repo "$GITHUB_REPOSITORY" --latest

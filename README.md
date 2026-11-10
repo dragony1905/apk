@@ -3,13 +3,13 @@
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/dragony1905/apk/main/ORBIT.apk"><img src="https://img.shields.io/badge/Android-APK%20indir-FF7A45?style=for-the-badge&logo=android&logoColor=white" alt="Android için indir"></a>
-  <a href="https://raw.githubusercontent.com/dragony1905/apk/main/ORBIT-Setup.exe"><img src="https://img.shields.io/badge/Windows-Kurulum%20indir-292B30?style=for-the-badge&logo=windows&logoColor=white" alt="Windows için indir"></a>
+  <a href="https://raw.githubusercontent.com/dragony1905/apk/main/ORBIT.apk"><img src="https://img.shields.io/badge/Android-APK%20indir-D0451E?style=for-the-badge&logo=android&logoColor=white" alt="Android için indir"></a>
+  <a href="https://raw.githubusercontent.com/dragony1905/apk/main/ORBIT-Setup.exe"><img src="https://img.shields.io/badge/Windows-Kurulum%20indir-1C1E23?style=for-the-badge&logo=windows&logoColor=white" alt="Windows için indir"></a>
   <a href="https://orbit-pocket-play.lovable.app"><img src="https://img.shields.io/badge/iPhone%20%C2%B7%20Web-Tarayıcıda%20oyna-3D9BF0?style=for-the-badge&logo=safari&logoColor=white" alt="Tarayıcıda oyna"></a>
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/dragony1905/apk?label=s%C3%BCr%C3%BCm&color=FF7A45" alt="Son sürüm"></a>
+  <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/dragony1905/apk?label=s%C3%BCr%C3%BCm&color=D0451E" alt="Son sürüm"></a>
   <img src="https://img.shields.io/badge/fiyat-%C3%BCcretsiz-22A06B" alt="Ücretsiz">
   <img src="https://img.shields.io/badge/dil-T%C3%BCrk%C3%A7e%20%C2%B7%20English-777873" alt="Türkçe ve İngilizce">
 </p>

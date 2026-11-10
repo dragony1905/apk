@@ -1,4 +1,4 @@
-# ORBİT — Android APK indir
+# ORBİT — Android ve Windows için indir
 
 Halkaları döndürüp aynı renkleri buluşturduğun bir bulmaca oyunu.
 
@@ -15,8 +15,18 @@ Yeni sürüm eskisinin üstüne kurulur; oyun ilerlemen silinmez (1.8.3'ten geç
 ## Her zaman en son sürüm
 Doğrudan indirme (QR kodu da bu adresi açar): https://raw.githubusercontent.com/dragony1905/apk/main/ORBIT.apk — her yeni sürümde güncellenir.
 
-## iPhone, iPad ve bilgisayar: web sitesi
-APK yalnızca Android'de çalışır. iPhone'da ve bilgisayarda oyun tarayıcıdan oynanır:
+## Windows (3.3.0 ve sonrası)
+**İndir:** https://raw.githubusercontent.com/dragony1905/apk/main/ORBIT-Setup.exe — her yeni sürümde güncellenir.
+
+1. Dosyayı aç. Yönetici izni gerekmez; ORBİT Başlat menüsüne eklenir.
+2. Windows "Bilgisayarınız korundu" derse **Ek bilgi → Yine de çalıştır**. Kurulum dosyası dijital olarak imzalı olmadığı için bu uyarı çıkar.
+3. Google ile giriş bilgisayarın kendi tarayıcısında yapılır, sonra oyuna otomatik dönülür. Kullanıcı adı ve şifreyle giriş doğrudan uygulamada.
+4. Yeni sürüm çıkınca uygulama haber verir; indirir, doğrular ve kendisi kurar.
+
+Bilgisayarda fare tekerleği imlecin üstündeki halkayı çevirir; ↑ ↓ halka seçer, ← → çevirir, Esc geri/duraklat, Enter yeni tur, F11 tam ekran.
+
+## iPhone, iPad ve tarayıcı: web sitesi
+APK yalnızca Android'de çalışır. iPhone'da (ve istersen bilgisayarda) oyun tarayıcıdan oynanır:
 
 **https://orbit-pocket-play.lovable.app**
 

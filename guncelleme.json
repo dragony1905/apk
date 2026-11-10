@@ -2,33 +2,39 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "3.3.0",
-    "code": 46,
-    "previous": "3.2.1",
-    "date": "2026-11-09",
-    "title": "ORBİT artık bilgisayarda",
-    "notes": "ORBİT'in Windows uygulaması çıktı. Aynı hesapla bilgisayarda da oynayabilirsin.",
+    "version": "3.4.0",
+    "code": 47,
+    "previous": "3.3.0",
+    "date": "2026-11-10",
+    "title": "Bulmaca modu, kendi bulmacanı yap ve yeni temalar",
+    "notes": "Yeni Bulmaca modu: 60 bölüm, her gün yeni bir günün bulmacası, arkadaşlarınla karşılaştırma ve kendi bulmacanı yapıp paylaşma.",
     "added": [
-      "Windows uygulaması (ORBIT-Setup.exe ile kurulur)",
-      "Bilgisayarda Google ile giriş tarayıcı üzerinden yapılır"
+      "Bulmaca modu: 60 bölüm, yıldızlar, ipucu, hamle geri alma ve altın ödülleri",
+      "Günün bulmacası, bulmaca serisi ve son 14 günün arşivi",
+      "Bulmaca oluşturucu: kendi bulmacanı yap, kodla ya da bağlantıyla paylaş",
+      "Sıralamada Bulmaca sekmesi ve bulmaca başarımları",
+      "Skorunu paylaş: tur sonunda skor kartı",
+      "Sistem teması (telefonun açık/koyu ayarına uyar) ve 4 yeni tema",
+      "Profilde skor gelişimi grafiği",
+      "Bilgisayarda fare tekerleği ve klavyeyle oynama"
     ],
     "fixed": [
-      "Mesaj gönderildikten sonra kısa süre \"yazıyor\" görünmesi"
+      "Küçük ekranlarda kesilen menü yazıları"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.3.0.apk",
-    "size": 7258024,
-    "sha256": "cd8077530963bf81ef0bca02f196fef4329147a5a9cea2cbe2961b62053fdc9c",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-3.4.0.apk",
+    "size": 7285616,
+    "sha256": "7545ac9227b3891fafacab0a6909306493906a2c2cc4e0c92c82ae113b90fc7f",
     "minCode": 1,
     "mandatory": false,
     "reason": ""
   },
   "windows": {
-    "version": "3.3.0",
-    "code": 46,
-    "previous": "3.2.1",
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-Setup-3.3.0.exe",
-    "size": 3279745,
-    "sha256": "114f3f8ac7c937fafd42e8b2341567c550a477b30dcddb11d17f13c466269bc0",
+    "version": "3.4.0",
+    "code": 47,
+    "previous": "3.3.0",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-Setup-3.4.0.exe",
+    "size": 3320810,
+    "sha256": "1c482d799a49eba34a767a028ac46429a03306aa9b47410f097cadbc9a267881",
     "minCode": 1,
     "mandatory": false
   }

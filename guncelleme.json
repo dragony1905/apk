@@ -2,37 +2,38 @@
   "schema": 1,
   "app": "com.orbit.game",
   "latest": {
-    "version": "4.0.0",
-    "code": 48,
-    "previous": "3.4.0",
-    "date": "2026-11-10",
-    "title": "ORBİT 4.0: yeni görünüm",
-    "notes": "ORBİT yeniden tasarlandı: yeni logo ve simge, yenilenen açık ve koyu tema, daha okunaklı yazılar ve tek bir düğme dili. Oyun, ilerlemen ve kayıtların aynen duruyor.",
+    "version": "4.1.0",
+    "code": 50,
+    "previous": "4.0.0",
+    "date": "2026-11-11",
+    "title": "ORBİT 4.1: koyu cam görünüm ve Yıldırım Maç",
+    "notes": "ORBİT'in arayüzü yenilendi: koyu cam tasarım, alttan geçişli 5 sekme ve büyük OYNA düğmesi. Yeni Yıldırım Maç modu geldi. İlerlemen, kupaların ve koleksiyonun aynen duruyor.",
     "added": [
-      "Yeni ORBİT logosu ve uygulama simgesi",
-      "Yenilenen açık (fildişi) ve koyu (kömür) tema",
-      "Telefon koyu moddayken koyu açılış ekranı",
-      "Daha büyük dokunma alanları ve daha okunaklı yazılar"
+      "Yıldırım Maç: 60 saniyelik hızlı mod",
+      "Alt çubuk: Mağaza, Kupa, Ana Menü, Görevler, Profil",
+      "Mod seçimi: Normal, Yıldırım, Günün Turu, VS, Günün Bulmacası",
+      "Yukarı doğru ilerleyen Kupa Yolu haritası",
+      "Yeni varsayılan tema: ORBİT Cam (koyu)"
     ],
     "fixed": [
-      "Düşük kontrastlı düğme ve yazılar",
-      "Koyu temada açılışta bir an açık zemin görünmesi",
-      "Tur sonunda Yeniden oyna düğmesinin kaydırmadan görünmemesi"
+      "Daha akıcı menü ve oyun (60 kare/sn)",
+      "Yazı tipi seçimi her temada çalışır",
+      "Günlük ödül hazır işareti alt çubukta da görünür"
     ],
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-4.0.0.apk",
-    "size": 7235912,
-    "sha256": "546ed81ecef6746e995672a5a4bbb193420668576eafd7471d47219103174b85",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-4.1.0.apk",
+    "size": 7403208,
+    "sha256": "fafab48f257c21a242c41c8efae8f1fc76f44307fac306b3a1596dce054a4738",
     "minCode": 1,
     "mandatory": false,
     "reason": ""
   },
   "windows": {
-    "version": "4.0.0",
-    "code": 48,
-    "previous": "3.4.0",
-    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-Setup-4.0.0.exe",
-    "size": 3307260,
-    "sha256": "8bf889ae3cf5a07597d30a6db28091d28e04ac50473f069f121138a800900a2d",
+    "version": "4.1.0",
+    "code": 50,
+    "previous": "4.0.0",
+    "url": "https://raw.githubusercontent.com/dragony1905/apk/main/surumler/ORBIT-Setup-4.1.0.exe",
+    "size": 3432056,
+    "sha256": "f73442fbbe88fe88147f7ca64f6e4cd8d23e732cb9be878326baee3e6e4dd80d",
     "minCode": 1,
     "mandatory": false
   }

@@ -1,0 +1,79 @@
+name: Çiğköfte Oyunu - Android derle
+
+# cigkofte/ klasöründeki Unity projesini GameCI ile derleyip APK üretir.
+# Unity lisansı gerektirdiği için şimdilik yalnızca elle çalıştırılır:
+# Actions > "Çiğköfte Oyunu - Android derle" > Run workflow.
+# Gerekli secret'lar: UNITY_LICENSE, UNITY_EMAIL, UNITY_PASSWORD (bkz. cigkofte/README.md).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cigkofte-derle
+  cancel-in-progress: true
+
+jobs:
+  android:
+    name: Android APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Lisans kontrolü
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        run: |
+          eksik=""
+          [ -z "$UNITY_LICENSE" ] && eksik="$eksik UNITY_LICENSE"
+          [ -z "$UNITY_EMAIL" ] && eksik="$eksik UNITY_EMAIL"
+          [ -z "$UNITY_PASSWORD" ] && eksik="$eksik UNITY_PASSWORD"
+          if [ -n "$eksik" ]; then
+            echo "::error::Eksik secret:$eksik. Kurulum adımları cigkofte/README.md dosyasında."
+            exit 1
+          fi
+
+      - name: Disk alanı aç
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android /opt/hostedtoolcache/CodeQL
+          df -h /
+
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+          sparse-checkout: cigkofte
+          filter: blob:none
+
+      - uses: actions/cache@v4
+        with:
+          path: cigkofte/Library
+          key: cigkofte-Library-Android-${{ hashFiles('cigkofte/Assets/**', 'cigkofte/Packages/**', 'cigkofte/ProjectSettings/**') }}
+          restore-keys: |
+            cigkofte-Library-Android-
+
+      - name: Unity ile derle
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          projectPath: cigkofte
+          unityVersion: 6000.3.8f1
+          targetPlatform: Android
+          androidExportType: androidPackage
+          buildMethod: Derleyici.AndroidDerle
+          buildName: CigKofte
+          versioning: Custom
+          version: 0.1.0
+          allowDirtyBuild: true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CigKofte-Android
+          path: |
+            build/**/*.apk
+            cigkofte/build/**/*.apk
+          if-no-files-found: error
